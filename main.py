@@ -13,7 +13,7 @@ class Book:
         return round(self.price, 2)
 
     def sell(self, amount: int) -> str or None:
-        if amount < self.quantity:
+        if amount > self.quantity:
             return "There are no such amount of books in the storage"
         else:
             self.quantity -= amount
